@@ -9,7 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/iosevka@0.3.0/dist/iosevka.css" rel="stylesheet">
     <style>
         @import url('https://cdn.jsdelivr.net/npm/iosevka@0.3.0/dist/iosevka.css');
-        body {
+
+	body {
             font-family: 'Arial', sans-serif;
             background-color: #e6f2ff;
             color: #333;
@@ -17,8 +18,9 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Changed from center to flex-start */
             min-height: 100vh;
+            padding-top: 10vh; /* Added padding to push content down slightly */
         }
 
         .container {
@@ -28,6 +30,7 @@
             padding: 40px;
             max-width: 600px;
             width: 90%;
+            margin-top: 0; /* Removed any top margin */
         }
 
         .name {
@@ -52,19 +55,20 @@
         }
 
         .skills {
-            margin-top: 5px;
-            text-align: center;
+            margin-top: 20px;
+            text-align: left;
             color: #333;
+        }
+
+        .skills p {
+            font-family: 'Iosevka Web', monospace;
+            font-size: 1em;
+            line-height: 1.6;
         }
 
         .skills strong {
             color: #0059ab;
-        }
-
-        .skills p {
-            font-family: 'Iosevka Web';
-            font-size: 1.2em;
-            line-height: 1.8;
+            font-family: 'Arial', sans-serif;
         }
 
         .social-links {
@@ -85,6 +89,9 @@
         }
 
         @media (max-width: 600px) {
+            body {
+                padding-top: 5vh;
+            }
             .container {
                 padding: 20px;
             }
